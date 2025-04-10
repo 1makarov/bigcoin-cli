@@ -19,3 +19,8 @@ Options:
       --rpc <RPC>                  RPC endpoint [default: https://api.mainnet.abs.xyz]
   -h, --help                       Print help
 ```
+
+## Contracts
+
+- [0x09Ee83D8fA0f3F03f2aefad6a82353c1e5DE5705](https://abscan.org/address/0x09Ee83D8fA0f3F03f2aefad6a82353c1e5DE5705) (main)
+- [0xDf70075737E9F96B078ab4461EeE3e055E061223](https://abscan.org/address/0xDf70075737E9F96B078ab4461EeE3e055E061223) (token)
