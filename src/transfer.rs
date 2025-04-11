@@ -12,7 +12,7 @@ use tokio::task::JoinSet;
 
 #[derive(Debug, Clone, Copy, Parser)]
 pub struct TransferParams {
-    /// Recipient address for tokens 
+    /// Recipient address for tokens
     #[clap(short, long)]
     pub receiver: Address,
 
@@ -58,6 +58,9 @@ pub async fn transfer<N: Network, W: NetworkWallet<N>>(
     }: TransferParams,
 ) -> anyhow::Result<()> {
     let addr = wallet.default_signer_address();
+    if addr == receiver {
+        return Ok(());
+    }
 
     let balance = provider
         .call_decode::<U256>(
