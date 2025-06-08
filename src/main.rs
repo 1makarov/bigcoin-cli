@@ -9,7 +9,7 @@ use alloy::{
 use anyhow::{Context, bail};
 use bigcoin_cli::{
     CHAIN_ID, add_starter::multi_add_starter, claim::multi_claim, initialize::multi_initialize,
-    print::print, transfer::multi_transfer,
+    print::print, transfer::multi_transfer, transfer_eth::transfer_eth,
 };
 use clap::Parser;
 
@@ -53,6 +53,7 @@ async fn main() -> anyhow::Result<()> {
         }
         Action::Claim(params) => multi_claim(provider, wallets, params, max_threads).await,
         Action::Transfer(params) => multi_transfer(provider, wallets, params, max_threads).await,
+        Action::TransferEth(params) => transfer_eth(provider, wallets, params, max_threads).await,
         Action::Print => print(provider, wallets, max_threads).await,
     };
 

@@ -6,12 +6,13 @@ $ bigcoin-cli --help
 Usage: bigcoin-cli [OPTIONS] --path <PATH> <COMMAND>
 
 Commands:
-  initialize   Initial payment [aliases: init]
-  add-starter  Add starter miner [aliases: start]
-  claim        Claims available rewards
-  transfer     Transfer tokens to address [aliases: send]
-  print        Print total rewards from all keys
-  help         Print this message or the help of the given subcommand(s)
+  initialize    Initial payment [aliases: init]
+  add-starter   Add starter miner [aliases: start]
+  claim         Claims available rewards
+  transfer      Transfer tokens to address [aliases: send]
+  transfer-eth  Transfer eth to address [aliases: eth]
+  print         Print total rewards
+  help          Print this message or the help of the given subcommand(s)
 
 Options:
   -m, --max-threads <MAX_THREADS>  Max concurrent threads [default: 20]

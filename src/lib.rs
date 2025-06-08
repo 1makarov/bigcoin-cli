@@ -8,8 +8,9 @@ use alloy::{
 pub mod add_starter;
 pub mod claim;
 pub mod initialize;
-pub mod transfer;
 pub mod print;
+pub mod transfer;
+pub mod transfer_eth;
 
 mod provider_ext;
 

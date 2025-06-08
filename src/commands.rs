@@ -1,6 +1,9 @@
 use std::path::PathBuf;
 
-use bigcoin_cli::{add_starter::AddStarterParams, claim::ClaimParams, transfer::TransferParams};
+use bigcoin_cli::{
+    add_starter::AddStarterParams, claim::ClaimParams, transfer::TransferParams,
+    transfer_eth::TransferEthParams,
+};
 use clap::{Parser, Subcommand};
 
 #[derive(Debug, Parser)]
@@ -24,7 +27,7 @@ pub struct Args {
 
 #[derive(Debug, Clone, Subcommand)]
 pub enum Action {
-    /// Initial payment.
+    /// Initial payment
     #[clap(visible_alias = "init")]
     Initialize,
 
@@ -39,6 +42,10 @@ pub enum Action {
     #[clap(visible_alias = "send")]
     Transfer(TransferParams),
 
-    /// Print total rewards from all keys.
+    /// Transfer eth to address
+    #[clap(visible_alias = "eth")]
+    TransferEth(TransferEthParams),
+
+    /// Print total rewards
     Print,
 }
